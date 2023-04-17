@@ -4518,6 +4518,10 @@ inline int32_t Vector_1_get_Count_mC75C8C6E913E7FF8A3D10467D6DADE41711EF3CC_inli
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SpanHelpers_LocateFirstFoundChar_m098A1FAD568D867B650B0B163ED018A47BFD84FA_inline (uint64_t ___0_match, const RuntimeMethod* method) ;
 // System.Int32 System.SpanHelpers::LocateLastFoundChar(System.UInt64)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SpanHelpers_LocateLastFoundChar_mFF159E52202169C29CCF5ABAD8EBFA3D91351D43_inline (uint64_t ___0_match, const RuntimeMethod* method) ;
+// System.Void System.Runtime.RuntimeImports::RhZeroMemory(System.Byte&,System.UInt64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeImports_RhZeroMemory_m412EFFB5FBA11DD440375C72285A875977361A85 (uint8_t* ___0_b, uint64_t ___1_byteLength, const RuntimeMethod* method) ;
+// System.IntPtr System.IntPtr::op_Explicit(System.Int64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t IntPtr_op_Explicit_mDDF1A91C58AC17347D735651A0D830CA1E86D4B0 (int64_t ___0_value, const RuntimeMethod* method) ;
 // System.Void System.Text.ValueStringBuilder::AppendSlow(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueStringBuilder_AppendSlow_m552667FC4FDD47DBE6928C63C8039F1E5E4EC512 (ValueStringBuilder_tC142140E6C0B9CD2BA423636F1BB5822672673E9* __this, String_t* ___0_s, const RuntimeMethod* method) ;
 // System.Void System.Text.ValueStringBuilder::GrowAndAppend(System.Char)
@@ -32299,6 +32303,891 @@ IL_000e:
 	{
 		int32_t L_3 = V_0;
 		return L_3;
+	}
+}
+// System.Void System.SpanHelpers::ClearWithoutReferences(System.Byte&,System.UInt64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpanHelpers_ClearWithoutReferences_m65DB2925AE7A5FF88BB3EA1BF90513C9ADF0653D (uint8_t* ___0_b, uint64_t ___1_byteLength, const RuntimeMethod* method) 
+{
+	uint64_t V_0 = 0;
+	uint64_t V_1 = 0;
+	uint64_t V_2 = 0;
+	int64_t G_B4_0 = 0;
+	int64_t G_B3_0 = 0;
+	{
+		uint64_t L_0 = ___1_byteLength;
+		if (L_0)
+		{
+			goto IL_0004;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0004:
+	{
+		uint64_t L_1 = ___1_byteLength;
+		int64_t L_2 = ((int64_t)il2cpp_codegen_subtract((int64_t)L_1, ((int64_t)1)));
+		G_B3_0 = L_2;
+		if ((!(((uint64_t)L_2) > ((uint64_t)((int64_t)((int32_t)21))))))
+		{
+			G_B4_0 = L_2;
+			goto IL_0014;
+		}
+	}
+	{
+		goto IL_02f8;
+	}
+
+IL_0014:
+	{
+		switch (((int32_t)(uint32_t)G_B4_0))
+		{
+			case 0:
+			{
+				goto IL_0077;
+			}
+			case 1:
+			{
+				goto IL_007b;
+			}
+			case 2:
+			{
+				goto IL_0084;
+			}
+			case 3:
+			{
+				goto IL_0096;
+			}
+			case 4:
+			{
+				goto IL_009f;
+			}
+			case 5:
+			{
+				goto IL_00b1;
+			}
+			case 6:
+			{
+				goto IL_00c8;
+			}
+			case 7:
+			{
+				goto IL_00e8;
+			}
+			case 8:
+			{
+				goto IL_00f2;
+			}
+			case 9:
+			{
+				goto IL_0105;
+			}
+			case 10:
+			{
+				goto IL_011d;
+			}
+			case 11:
+			{
+				goto IL_013f;
+			}
+			case 12:
+			{
+				goto IL_0157;
+			}
+			case 13:
+			{
+				goto IL_0179;
+			}
+			case 14:
+			{
+				goto IL_01a0;
+			}
+			case 15:
+			{
+				goto IL_01d1;
+			}
+			case 16:
+			{
+				goto IL_01ea;
+			}
+			case 17:
+			{
+				goto IL_020d;
+			}
+			case 18:
+			{
+				goto IL_0235;
+			}
+			case 19:
+			{
+				goto IL_0267;
+			}
+			case 20:
+			{
+				goto IL_028f;
+			}
+			case 21:
+			{
+				goto IL_02c1;
+			}
+		}
+	}
+	{
+		goto IL_02f8;
+	}
+
+IL_0077:
+	{
+		uint8_t* L_3 = ___0_b;
+		*((int8_t*)L_3) = (int8_t)0;
+		return;
+	}
+
+IL_007b:
+	{
+		uint8_t* L_4 = ___0_b;
+		int16_t* L_5;
+		L_5 = il2cpp_unsafe_as_ref<int16_t>(L_4);
+		*((int16_t*)L_5) = (int16_t)0;
+		return;
+	}
+
+IL_0084:
+	{
+		uint8_t* L_6 = ___0_b;
+		int16_t* L_7;
+		L_7 = il2cpp_unsafe_as_ref<int16_t>(L_6);
+		*((int16_t*)L_7) = (int16_t)0;
+		uint8_t* L_8 = ___0_b;
+		uint8_t* L_9;
+		L_9 = il2cpp_unsafe_add<uint8_t,int32_t>(L_8, 2);
+		*((int8_t*)L_9) = (int8_t)0;
+		return;
+	}
+
+IL_0096:
+	{
+		uint8_t* L_10 = ___0_b;
+		int32_t* L_11;
+		L_11 = il2cpp_unsafe_as_ref<int32_t>(L_10);
+		*((int32_t*)L_11) = (int32_t)0;
+		return;
+	}
+
+IL_009f:
+	{
+		uint8_t* L_12 = ___0_b;
+		int32_t* L_13;
+		L_13 = il2cpp_unsafe_as_ref<int32_t>(L_12);
+		*((int32_t*)L_13) = (int32_t)0;
+		uint8_t* L_14 = ___0_b;
+		uint8_t* L_15;
+		L_15 = il2cpp_unsafe_add<uint8_t,int32_t>(L_14, 4);
+		*((int8_t*)L_15) = (int8_t)0;
+		return;
+	}
+
+IL_00b1:
+	{
+		uint8_t* L_16 = ___0_b;
+		int32_t* L_17;
+		L_17 = il2cpp_unsafe_as_ref<int32_t>(L_16);
+		*((int32_t*)L_17) = (int32_t)0;
+		uint8_t* L_18 = ___0_b;
+		uint8_t* L_19;
+		L_19 = il2cpp_unsafe_add<uint8_t,int32_t>(L_18, 4);
+		int16_t* L_20;
+		L_20 = il2cpp_unsafe_as_ref<int16_t>(L_19);
+		*((int16_t*)L_20) = (int16_t)0;
+		return;
+	}
+
+IL_00c8:
+	{
+		uint8_t* L_21 = ___0_b;
+		int32_t* L_22;
+		L_22 = il2cpp_unsafe_as_ref<int32_t>(L_21);
+		*((int32_t*)L_22) = (int32_t)0;
+		uint8_t* L_23 = ___0_b;
+		uint8_t* L_24;
+		L_24 = il2cpp_unsafe_add<uint8_t,int32_t>(L_23, 4);
+		int16_t* L_25;
+		L_25 = il2cpp_unsafe_as_ref<int16_t>(L_24);
+		*((int16_t*)L_25) = (int16_t)0;
+		uint8_t* L_26 = ___0_b;
+		uint8_t* L_27;
+		L_27 = il2cpp_unsafe_add<uint8_t,int32_t>(L_26, 6);
+		*((int8_t*)L_27) = (int8_t)0;
+		return;
+	}
+
+IL_00e8:
+	{
+		uint8_t* L_28 = ___0_b;
+		int64_t* L_29;
+		L_29 = il2cpp_unsafe_as_ref<int64_t>(L_28);
+		*((int64_t*)L_29) = (int64_t)((int64_t)0);
+		return;
+	}
+
+IL_00f2:
+	{
+		uint8_t* L_30 = ___0_b;
+		int64_t* L_31;
+		L_31 = il2cpp_unsafe_as_ref<int64_t>(L_30);
+		*((int64_t*)L_31) = (int64_t)((int64_t)0);
+		uint8_t* L_32 = ___0_b;
+		uint8_t* L_33;
+		L_33 = il2cpp_unsafe_add<uint8_t,int32_t>(L_32, 8);
+		*((int8_t*)L_33) = (int8_t)0;
+		return;
+	}
+
+IL_0105:
+	{
+		uint8_t* L_34 = ___0_b;
+		int64_t* L_35;
+		L_35 = il2cpp_unsafe_as_ref<int64_t>(L_34);
+		*((int64_t*)L_35) = (int64_t)((int64_t)0);
+		uint8_t* L_36 = ___0_b;
+		uint8_t* L_37;
+		L_37 = il2cpp_unsafe_add<uint8_t,int32_t>(L_36, 8);
+		int16_t* L_38;
+		L_38 = il2cpp_unsafe_as_ref<int16_t>(L_37);
+		*((int16_t*)L_38) = (int16_t)0;
+		return;
+	}
+
+IL_011d:
+	{
+		uint8_t* L_39 = ___0_b;
+		int64_t* L_40;
+		L_40 = il2cpp_unsafe_as_ref<int64_t>(L_39);
+		*((int64_t*)L_40) = (int64_t)((int64_t)0);
+		uint8_t* L_41 = ___0_b;
+		uint8_t* L_42;
+		L_42 = il2cpp_unsafe_add<uint8_t,int32_t>(L_41, 8);
+		int16_t* L_43;
+		L_43 = il2cpp_unsafe_as_ref<int16_t>(L_42);
+		*((int16_t*)L_43) = (int16_t)0;
+		uint8_t* L_44 = ___0_b;
+		uint8_t* L_45;
+		L_45 = il2cpp_unsafe_add<uint8_t,int32_t>(L_44, ((int32_t)10));
+		*((int8_t*)L_45) = (int8_t)0;
+		return;
+	}
+
+IL_013f:
+	{
+		uint8_t* L_46 = ___0_b;
+		int64_t* L_47;
+		L_47 = il2cpp_unsafe_as_ref<int64_t>(L_46);
+		*((int64_t*)L_47) = (int64_t)((int64_t)0);
+		uint8_t* L_48 = ___0_b;
+		uint8_t* L_49;
+		L_49 = il2cpp_unsafe_add<uint8_t,int32_t>(L_48, 8);
+		int32_t* L_50;
+		L_50 = il2cpp_unsafe_as_ref<int32_t>(L_49);
+		*((int32_t*)L_50) = (int32_t)0;
+		return;
+	}
+
+IL_0157:
+	{
+		uint8_t* L_51 = ___0_b;
+		int64_t* L_52;
+		L_52 = il2cpp_unsafe_as_ref<int64_t>(L_51);
+		*((int64_t*)L_52) = (int64_t)((int64_t)0);
+		uint8_t* L_53 = ___0_b;
+		uint8_t* L_54;
+		L_54 = il2cpp_unsafe_add<uint8_t,int32_t>(L_53, 8);
+		int32_t* L_55;
+		L_55 = il2cpp_unsafe_as_ref<int32_t>(L_54);
+		*((int32_t*)L_55) = (int32_t)0;
+		uint8_t* L_56 = ___0_b;
+		uint8_t* L_57;
+		L_57 = il2cpp_unsafe_add<uint8_t,int32_t>(L_56, ((int32_t)12));
+		*((int8_t*)L_57) = (int8_t)0;
+		return;
+	}
+
+IL_0179:
+	{
+		uint8_t* L_58 = ___0_b;
+		int64_t* L_59;
+		L_59 = il2cpp_unsafe_as_ref<int64_t>(L_58);
+		*((int64_t*)L_59) = (int64_t)((int64_t)0);
+		uint8_t* L_60 = ___0_b;
+		uint8_t* L_61;
+		L_61 = il2cpp_unsafe_add<uint8_t,int32_t>(L_60, 8);
+		int32_t* L_62;
+		L_62 = il2cpp_unsafe_as_ref<int32_t>(L_61);
+		*((int32_t*)L_62) = (int32_t)0;
+		uint8_t* L_63 = ___0_b;
+		uint8_t* L_64;
+		L_64 = il2cpp_unsafe_add<uint8_t,int32_t>(L_63, ((int32_t)12));
+		int16_t* L_65;
+		L_65 = il2cpp_unsafe_as_ref<int16_t>(L_64);
+		*((int16_t*)L_65) = (int16_t)0;
+		return;
+	}
+
+IL_01a0:
+	{
+		uint8_t* L_66 = ___0_b;
+		int64_t* L_67;
+		L_67 = il2cpp_unsafe_as_ref<int64_t>(L_66);
+		*((int64_t*)L_67) = (int64_t)((int64_t)0);
+		uint8_t* L_68 = ___0_b;
+		uint8_t* L_69;
+		L_69 = il2cpp_unsafe_add<uint8_t,int32_t>(L_68, 8);
+		int32_t* L_70;
+		L_70 = il2cpp_unsafe_as_ref<int32_t>(L_69);
+		*((int32_t*)L_70) = (int32_t)0;
+		uint8_t* L_71 = ___0_b;
+		uint8_t* L_72;
+		L_72 = il2cpp_unsafe_add<uint8_t,int32_t>(L_71, ((int32_t)12));
+		int16_t* L_73;
+		L_73 = il2cpp_unsafe_as_ref<int16_t>(L_72);
+		*((int16_t*)L_73) = (int16_t)0;
+		uint8_t* L_74 = ___0_b;
+		uint8_t* L_75;
+		L_75 = il2cpp_unsafe_add<uint8_t,int32_t>(L_74, ((int32_t)14));
+		*((int8_t*)L_75) = (int8_t)0;
+		return;
+	}
+
+IL_01d1:
+	{
+		uint8_t* L_76 = ___0_b;
+		int64_t* L_77;
+		L_77 = il2cpp_unsafe_as_ref<int64_t>(L_76);
+		*((int64_t*)L_77) = (int64_t)((int64_t)0);
+		uint8_t* L_78 = ___0_b;
+		uint8_t* L_79;
+		L_79 = il2cpp_unsafe_add<uint8_t,int32_t>(L_78, 8);
+		int64_t* L_80;
+		L_80 = il2cpp_unsafe_as_ref<int64_t>(L_79);
+		*((int64_t*)L_80) = (int64_t)((int64_t)0);
+		return;
+	}
+
+IL_01ea:
+	{
+		uint8_t* L_81 = ___0_b;
+		int64_t* L_82;
+		L_82 = il2cpp_unsafe_as_ref<int64_t>(L_81);
+		*((int64_t*)L_82) = (int64_t)((int64_t)0);
+		uint8_t* L_83 = ___0_b;
+		uint8_t* L_84;
+		L_84 = il2cpp_unsafe_add<uint8_t,int32_t>(L_83, 8);
+		int64_t* L_85;
+		L_85 = il2cpp_unsafe_as_ref<int64_t>(L_84);
+		*((int64_t*)L_85) = (int64_t)((int64_t)0);
+		uint8_t* L_86 = ___0_b;
+		uint8_t* L_87;
+		L_87 = il2cpp_unsafe_add<uint8_t,int32_t>(L_86, ((int32_t)16));
+		*((int8_t*)L_87) = (int8_t)0;
+		return;
+	}
+
+IL_020d:
+	{
+		uint8_t* L_88 = ___0_b;
+		int64_t* L_89;
+		L_89 = il2cpp_unsafe_as_ref<int64_t>(L_88);
+		*((int64_t*)L_89) = (int64_t)((int64_t)0);
+		uint8_t* L_90 = ___0_b;
+		uint8_t* L_91;
+		L_91 = il2cpp_unsafe_add<uint8_t,int32_t>(L_90, 8);
+		int64_t* L_92;
+		L_92 = il2cpp_unsafe_as_ref<int64_t>(L_91);
+		*((int64_t*)L_92) = (int64_t)((int64_t)0);
+		uint8_t* L_93 = ___0_b;
+		uint8_t* L_94;
+		L_94 = il2cpp_unsafe_add<uint8_t,int32_t>(L_93, ((int32_t)16));
+		int16_t* L_95;
+		L_95 = il2cpp_unsafe_as_ref<int16_t>(L_94);
+		*((int16_t*)L_95) = (int16_t)0;
+		return;
+	}
+
+IL_0235:
+	{
+		uint8_t* L_96 = ___0_b;
+		int64_t* L_97;
+		L_97 = il2cpp_unsafe_as_ref<int64_t>(L_96);
+		*((int64_t*)L_97) = (int64_t)((int64_t)0);
+		uint8_t* L_98 = ___0_b;
+		uint8_t* L_99;
+		L_99 = il2cpp_unsafe_add<uint8_t,int32_t>(L_98, 8);
+		int64_t* L_100;
+		L_100 = il2cpp_unsafe_as_ref<int64_t>(L_99);
+		*((int64_t*)L_100) = (int64_t)((int64_t)0);
+		uint8_t* L_101 = ___0_b;
+		uint8_t* L_102;
+		L_102 = il2cpp_unsafe_add<uint8_t,int32_t>(L_101, ((int32_t)16));
+		int16_t* L_103;
+		L_103 = il2cpp_unsafe_as_ref<int16_t>(L_102);
+		*((int16_t*)L_103) = (int16_t)0;
+		uint8_t* L_104 = ___0_b;
+		uint8_t* L_105;
+		L_105 = il2cpp_unsafe_add<uint8_t,int32_t>(L_104, ((int32_t)18));
+		*((int8_t*)L_105) = (int8_t)0;
+		return;
+	}
+
+IL_0267:
+	{
+		uint8_t* L_106 = ___0_b;
+		int64_t* L_107;
+		L_107 = il2cpp_unsafe_as_ref<int64_t>(L_106);
+		*((int64_t*)L_107) = (int64_t)((int64_t)0);
+		uint8_t* L_108 = ___0_b;
+		uint8_t* L_109;
+		L_109 = il2cpp_unsafe_add<uint8_t,int32_t>(L_108, 8);
+		int64_t* L_110;
+		L_110 = il2cpp_unsafe_as_ref<int64_t>(L_109);
+		*((int64_t*)L_110) = (int64_t)((int64_t)0);
+		uint8_t* L_111 = ___0_b;
+		uint8_t* L_112;
+		L_112 = il2cpp_unsafe_add<uint8_t,int32_t>(L_111, ((int32_t)16));
+		int32_t* L_113;
+		L_113 = il2cpp_unsafe_as_ref<int32_t>(L_112);
+		*((int32_t*)L_113) = (int32_t)0;
+		return;
+	}
+
+IL_028f:
+	{
+		uint8_t* L_114 = ___0_b;
+		int64_t* L_115;
+		L_115 = il2cpp_unsafe_as_ref<int64_t>(L_114);
+		*((int64_t*)L_115) = (int64_t)((int64_t)0);
+		uint8_t* L_116 = ___0_b;
+		uint8_t* L_117;
+		L_117 = il2cpp_unsafe_add<uint8_t,int32_t>(L_116, 8);
+		int64_t* L_118;
+		L_118 = il2cpp_unsafe_as_ref<int64_t>(L_117);
+		*((int64_t*)L_118) = (int64_t)((int64_t)0);
+		uint8_t* L_119 = ___0_b;
+		uint8_t* L_120;
+		L_120 = il2cpp_unsafe_add<uint8_t,int32_t>(L_119, ((int32_t)16));
+		int32_t* L_121;
+		L_121 = il2cpp_unsafe_as_ref<int32_t>(L_120);
+		*((int32_t*)L_121) = (int32_t)0;
+		uint8_t* L_122 = ___0_b;
+		uint8_t* L_123;
+		L_123 = il2cpp_unsafe_add<uint8_t,int32_t>(L_122, ((int32_t)20));
+		*((int8_t*)L_123) = (int8_t)0;
+		return;
+	}
+
+IL_02c1:
+	{
+		uint8_t* L_124 = ___0_b;
+		int64_t* L_125;
+		L_125 = il2cpp_unsafe_as_ref<int64_t>(L_124);
+		*((int64_t*)L_125) = (int64_t)((int64_t)0);
+		uint8_t* L_126 = ___0_b;
+		uint8_t* L_127;
+		L_127 = il2cpp_unsafe_add<uint8_t,int32_t>(L_126, 8);
+		int64_t* L_128;
+		L_128 = il2cpp_unsafe_as_ref<int64_t>(L_127);
+		*((int64_t*)L_128) = (int64_t)((int64_t)0);
+		uint8_t* L_129 = ___0_b;
+		uint8_t* L_130;
+		L_130 = il2cpp_unsafe_add<uint8_t,int32_t>(L_129, ((int32_t)16));
+		int32_t* L_131;
+		L_131 = il2cpp_unsafe_as_ref<int32_t>(L_130);
+		*((int32_t*)L_131) = (int32_t)0;
+		uint8_t* L_132 = ___0_b;
+		uint8_t* L_133;
+		L_133 = il2cpp_unsafe_add<uint8_t,int32_t>(L_132, ((int32_t)20));
+		int16_t* L_134;
+		L_134 = il2cpp_unsafe_as_ref<int16_t>(L_133);
+		*((int16_t*)L_134) = (int16_t)0;
+		return;
+	}
+
+IL_02f8:
+	{
+		uint64_t L_135 = ___1_byteLength;
+		if ((!(((uint64_t)L_135) < ((uint64_t)((int64_t)((int32_t)512))))))
+		{
+			goto IL_03fd;
+		}
+	}
+	{
+		V_0 = ((int64_t)0);
+		uint8_t* L_136 = ___0_b;
+		int32_t* L_137;
+		L_137 = il2cpp_unsafe_as_ref<int32_t>(L_136);
+		int32_t L_138 = *((int32_t*)L_137);
+		if (!((int32_t)(L_138&3)))
+		{
+			goto IL_0349;
+		}
+	}
+	{
+		uint8_t* L_139 = ___0_b;
+		int32_t* L_140;
+		L_140 = il2cpp_unsafe_as_ref<int32_t>(L_139);
+		int32_t L_141 = *((int32_t*)L_140);
+		if (!((int32_t)(L_141&1)))
+		{
+			goto IL_0336;
+		}
+	}
+	{
+		uint8_t* L_142 = ___0_b;
+		uint64_t L_143 = V_0;
+		uint8_t* L_144;
+		L_144 = il2cpp_unsafe_add_byte_offset<uint8_t,uint64_t>(L_142, L_143);
+		*((int8_t*)L_144) = (int8_t)0;
+		uint64_t L_145 = V_0;
+		V_0 = ((int64_t)il2cpp_codegen_add((int64_t)L_145, ((int64_t)1)));
+		uint8_t* L_146 = ___0_b;
+		int32_t* L_147;
+		L_147 = il2cpp_unsafe_as_ref<int32_t>(L_146);
+		int32_t L_148 = *((int32_t*)L_147);
+		if (((int32_t)(L_148&2)))
+		{
+			goto IL_0349;
+		}
+	}
+
+IL_0336:
+	{
+		uint8_t* L_149 = ___0_b;
+		uint64_t L_150 = V_0;
+		uint8_t* L_151;
+		L_151 = il2cpp_unsafe_add_byte_offset<uint8_t,uint64_t>(L_149, L_150);
+		int16_t* L_152;
+		L_152 = il2cpp_unsafe_as_ref<int16_t>(L_151);
+		*((int16_t*)L_152) = (int16_t)0;
+		uint64_t L_153 = V_0;
+		V_0 = ((int64_t)il2cpp_codegen_add((int64_t)L_153, ((int64_t)2)));
+	}
+
+IL_0349:
+	{
+		uint8_t* L_154 = ___0_b;
+		int32_t* L_155;
+		L_155 = il2cpp_unsafe_as_ref<int32_t>(L_154);
+		int32_t L_156 = *((int32_t*)L_155);
+		if (((int32_t)(((int32_t)il2cpp_codegen_subtract(L_156, 1))&4)))
+		{
+			goto IL_0369;
+		}
+	}
+	{
+		uint8_t* L_157 = ___0_b;
+		uint64_t L_158 = V_0;
+		uint8_t* L_159;
+		L_159 = il2cpp_unsafe_add_byte_offset<uint8_t,uint64_t>(L_157, L_158);
+		int32_t* L_160;
+		L_160 = il2cpp_unsafe_as_ref<int32_t>(L_159);
+		*((int32_t*)L_160) = (int32_t)0;
+		uint64_t L_161 = V_0;
+		V_0 = ((int64_t)il2cpp_codegen_add((int64_t)L_161, ((int64_t)4)));
+	}
+
+IL_0369:
+	{
+		uint64_t L_162 = ___1_byteLength;
+		V_1 = ((int64_t)il2cpp_codegen_subtract((int64_t)L_162, ((int64_t)((int32_t)16))));
+		uint64_t L_163 = ___1_byteLength;
+		uint64_t L_164 = V_0;
+		___1_byteLength = ((int64_t)il2cpp_codegen_subtract((int64_t)L_163, (int64_t)L_164));
+	}
+
+IL_0374:
+	{
+		uint64_t L_165 = V_0;
+		V_2 = ((int64_t)il2cpp_codegen_add((int64_t)L_165, ((int64_t)((int32_t)16))));
+		uint8_t* L_166 = ___0_b;
+		uint64_t L_167 = V_0;
+		uint8_t* L_168;
+		L_168 = il2cpp_unsafe_add_byte_offset<uint8_t,uint64_t>(L_166, L_167);
+		int64_t* L_169;
+		L_169 = il2cpp_unsafe_as_ref<int64_t>(L_168);
+		*((int64_t*)L_169) = (int64_t)((int64_t)0);
+		uint8_t* L_170 = ___0_b;
+		uint64_t L_171 = V_0;
+		uint8_t* L_172;
+		L_172 = il2cpp_unsafe_add_byte_offset<uint8_t,uint64_t>(L_170, ((int64_t)il2cpp_codegen_add((int64_t)L_171, ((int64_t)8))));
+		int64_t* L_173;
+		L_173 = il2cpp_unsafe_as_ref<int64_t>(L_172);
+		*((int64_t*)L_173) = (int64_t)((int64_t)0);
+		uint64_t L_174 = V_2;
+		V_0 = L_174;
+		uint64_t L_175 = V_2;
+		uint64_t L_176 = V_1;
+		if ((!(((uint64_t)L_175) > ((uint64_t)L_176))))
+		{
+			goto IL_0374;
+		}
+	}
+	{
+		uint64_t L_177 = ___1_byteLength;
+		if (!((int64_t)((int64_t)L_177&((int64_t)8))))
+		{
+			goto IL_03bb;
+		}
+	}
+	{
+		uint8_t* L_178 = ___0_b;
+		uint64_t L_179 = V_0;
+		uint8_t* L_180;
+		L_180 = il2cpp_unsafe_add_byte_offset<uint8_t,uint64_t>(L_178, L_179);
+		int64_t* L_181;
+		L_181 = il2cpp_unsafe_as_ref<int64_t>(L_180);
+		*((int64_t*)L_181) = (int64_t)((int64_t)0);
+		uint64_t L_182 = V_0;
+		V_0 = ((int64_t)il2cpp_codegen_add((int64_t)L_182, ((int64_t)8)));
+	}
+
+IL_03bb:
+	{
+		uint64_t L_183 = ___1_byteLength;
+		if (!((int64_t)((int64_t)L_183&((int64_t)4))))
+		{
+			goto IL_03d4;
+		}
+	}
+	{
+		uint8_t* L_184 = ___0_b;
+		uint64_t L_185 = V_0;
+		uint8_t* L_186;
+		L_186 = il2cpp_unsafe_add_byte_offset<uint8_t,uint64_t>(L_184, L_185);
+		int32_t* L_187;
+		L_187 = il2cpp_unsafe_as_ref<int32_t>(L_186);
+		*((int32_t*)L_187) = (int32_t)0;
+		uint64_t L_188 = V_0;
+		V_0 = ((int64_t)il2cpp_codegen_add((int64_t)L_188, ((int64_t)4)));
+	}
+
+IL_03d4:
+	{
+		uint64_t L_189 = ___1_byteLength;
+		if (!((int64_t)((int64_t)L_189&((int64_t)2))))
+		{
+			goto IL_03ed;
+		}
+	}
+	{
+		uint8_t* L_190 = ___0_b;
+		uint64_t L_191 = V_0;
+		uint8_t* L_192;
+		L_192 = il2cpp_unsafe_add_byte_offset<uint8_t,uint64_t>(L_190, L_191);
+		int16_t* L_193;
+		L_193 = il2cpp_unsafe_as_ref<int16_t>(L_192);
+		*((int16_t*)L_193) = (int16_t)0;
+		uint64_t L_194 = V_0;
+		V_0 = ((int64_t)il2cpp_codegen_add((int64_t)L_194, ((int64_t)2)));
+	}
+
+IL_03ed:
+	{
+		uint64_t L_195 = ___1_byteLength;
+		if (!((int64_t)((int64_t)L_195&((int64_t)1))))
+		{
+			goto IL_03fc;
+		}
+	}
+	{
+		uint8_t* L_196 = ___0_b;
+		uint64_t L_197 = V_0;
+		uint8_t* L_198;
+		L_198 = il2cpp_unsafe_add_byte_offset<uint8_t,uint64_t>(L_196, L_197);
+		*((int8_t*)L_198) = (int8_t)0;
+	}
+
+IL_03fc:
+	{
+		return;
+	}
+
+IL_03fd:
+	{
+		uint8_t* L_199 = ___0_b;
+		uint64_t L_200 = ___1_byteLength;
+		RuntimeImports_RhZeroMemory_m412EFFB5FBA11DD440375C72285A875977361A85(L_199, L_200, NULL);
+		return;
+	}
+}
+// System.Void System.SpanHelpers::ClearWithReferences(System.IntPtr&,System.UInt64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpanHelpers_ClearWithReferences_m9641D8B6DC3AE81B4B0734BBA0E477EF131CD430 (intptr_t* ___0_ip, uint64_t ___1_pointerSizeLength, const RuntimeMethod* method) 
+{
+	{
+		goto IL_00d2;
+	}
+
+IL_0005:
+	{
+		intptr_t* L_0 = ___0_ip;
+		uint64_t L_1 = ___1_pointerSizeLength;
+		intptr_t L_2;
+		L_2 = IntPtr_op_Explicit_mDDF1A91C58AC17347D735651A0D830CA1E86D4B0(L_1, NULL);
+		intptr_t* L_3;
+		L_3 = il2cpp_unsafe_add<intptr_t,intptr_t>(L_0, L_2);
+		intptr_t* L_4;
+		L_4 = il2cpp_unsafe_add<intptr_t,int32_t>(L_3, (-1));
+		il2cpp_codegen_initobj(L_4, sizeof(intptr_t));
+		intptr_t* L_5 = ___0_ip;
+		uint64_t L_6 = ___1_pointerSizeLength;
+		intptr_t L_7;
+		L_7 = IntPtr_op_Explicit_mDDF1A91C58AC17347D735651A0D830CA1E86D4B0(L_6, NULL);
+		intptr_t* L_8;
+		L_8 = il2cpp_unsafe_add<intptr_t,intptr_t>(L_5, L_7);
+		intptr_t* L_9;
+		L_9 = il2cpp_unsafe_add<intptr_t,int32_t>(L_8, ((int32_t)-2));
+		il2cpp_codegen_initobj(L_9, sizeof(intptr_t));
+		intptr_t* L_10 = ___0_ip;
+		uint64_t L_11 = ___1_pointerSizeLength;
+		intptr_t L_12;
+		L_12 = IntPtr_op_Explicit_mDDF1A91C58AC17347D735651A0D830CA1E86D4B0(L_11, NULL);
+		intptr_t* L_13;
+		L_13 = il2cpp_unsafe_add<intptr_t,intptr_t>(L_10, L_12);
+		intptr_t* L_14;
+		L_14 = il2cpp_unsafe_add<intptr_t,int32_t>(L_13, ((int32_t)-3));
+		il2cpp_codegen_initobj(L_14, sizeof(intptr_t));
+		intptr_t* L_15 = ___0_ip;
+		uint64_t L_16 = ___1_pointerSizeLength;
+		intptr_t L_17;
+		L_17 = IntPtr_op_Explicit_mDDF1A91C58AC17347D735651A0D830CA1E86D4B0(L_16, NULL);
+		intptr_t* L_18;
+		L_18 = il2cpp_unsafe_add<intptr_t,intptr_t>(L_15, L_17);
+		intptr_t* L_19;
+		L_19 = il2cpp_unsafe_add<intptr_t,int32_t>(L_18, ((int32_t)-4));
+		il2cpp_codegen_initobj(L_19, sizeof(intptr_t));
+		intptr_t* L_20 = ___0_ip;
+		uint64_t L_21 = ___1_pointerSizeLength;
+		intptr_t L_22;
+		L_22 = IntPtr_op_Explicit_mDDF1A91C58AC17347D735651A0D830CA1E86D4B0(L_21, NULL);
+		intptr_t* L_23;
+		L_23 = il2cpp_unsafe_add<intptr_t,intptr_t>(L_20, L_22);
+		intptr_t* L_24;
+		L_24 = il2cpp_unsafe_add<intptr_t,int32_t>(L_23, ((int32_t)-5));
+		il2cpp_codegen_initobj(L_24, sizeof(intptr_t));
+		intptr_t* L_25 = ___0_ip;
+		uint64_t L_26 = ___1_pointerSizeLength;
+		intptr_t L_27;
+		L_27 = IntPtr_op_Explicit_mDDF1A91C58AC17347D735651A0D830CA1E86D4B0(L_26, NULL);
+		intptr_t* L_28;
+		L_28 = il2cpp_unsafe_add<intptr_t,intptr_t>(L_25, L_27);
+		intptr_t* L_29;
+		L_29 = il2cpp_unsafe_add<intptr_t,int32_t>(L_28, ((int32_t)-6));
+		il2cpp_codegen_initobj(L_29, sizeof(intptr_t));
+		intptr_t* L_30 = ___0_ip;
+		uint64_t L_31 = ___1_pointerSizeLength;
+		intptr_t L_32;
+		L_32 = IntPtr_op_Explicit_mDDF1A91C58AC17347D735651A0D830CA1E86D4B0(L_31, NULL);
+		intptr_t* L_33;
+		L_33 = il2cpp_unsafe_add<intptr_t,intptr_t>(L_30, L_32);
+		intptr_t* L_34;
+		L_34 = il2cpp_unsafe_add<intptr_t,int32_t>(L_33, ((int32_t)-7));
+		il2cpp_codegen_initobj(L_34, sizeof(intptr_t));
+		intptr_t* L_35 = ___0_ip;
+		uint64_t L_36 = ___1_pointerSizeLength;
+		intptr_t L_37;
+		L_37 = IntPtr_op_Explicit_mDDF1A91C58AC17347D735651A0D830CA1E86D4B0(L_36, NULL);
+		intptr_t* L_38;
+		L_38 = il2cpp_unsafe_add<intptr_t,intptr_t>(L_35, L_37);
+		intptr_t* L_39;
+		L_39 = il2cpp_unsafe_add<intptr_t,int32_t>(L_38, ((int32_t)-8));
+		il2cpp_codegen_initobj(L_39, sizeof(intptr_t));
+		uint64_t L_40 = ___1_pointerSizeLength;
+		___1_pointerSizeLength = ((int64_t)il2cpp_codegen_subtract((int64_t)L_40, ((int64_t)8)));
+	}
+
+IL_00d2:
+	{
+		uint64_t L_41 = ___1_pointerSizeLength;
+		if ((!(((uint64_t)L_41) < ((uint64_t)((int64_t)8)))))
+		{
+			goto IL_0005;
+		}
+	}
+	{
+		uint64_t L_42 = ___1_pointerSizeLength;
+		if ((!(((uint64_t)L_42) < ((uint64_t)((int64_t)4)))))
+		{
+			goto IL_00ea;
+		}
+	}
+	{
+		uint64_t L_43 = ___1_pointerSizeLength;
+		if ((!(((uint64_t)L_43) < ((uint64_t)((int64_t)2)))))
+		{
+			goto IL_0136;
+		}
+	}
+	{
+		uint64_t L_44 = ___1_pointerSizeLength;
+		if ((!(((uint64_t)L_44) <= ((uint64_t)((int64_t)0)))))
+		{
+			goto IL_015b;
+		}
+	}
+	{
+		return;
+	}
+
+IL_00ea:
+	{
+		intptr_t* L_45 = ___0_ip;
+		intptr_t* L_46;
+		L_46 = il2cpp_unsafe_add<intptr_t,int32_t>(L_45, 2);
+		il2cpp_codegen_initobj(L_46, sizeof(intptr_t));
+		intptr_t* L_47 = ___0_ip;
+		intptr_t* L_48;
+		L_48 = il2cpp_unsafe_add<intptr_t,int32_t>(L_47, 3);
+		il2cpp_codegen_initobj(L_48, sizeof(intptr_t));
+		intptr_t* L_49 = ___0_ip;
+		uint64_t L_50 = ___1_pointerSizeLength;
+		intptr_t L_51;
+		L_51 = IntPtr_op_Explicit_mDDF1A91C58AC17347D735651A0D830CA1E86D4B0(L_50, NULL);
+		intptr_t* L_52;
+		L_52 = il2cpp_unsafe_add<intptr_t,intptr_t>(L_49, L_51);
+		intptr_t* L_53;
+		L_53 = il2cpp_unsafe_add<intptr_t,int32_t>(L_52, ((int32_t)-3));
+		il2cpp_codegen_initobj(L_53, sizeof(intptr_t));
+		intptr_t* L_54 = ___0_ip;
+		uint64_t L_55 = ___1_pointerSizeLength;
+		intptr_t L_56;
+		L_56 = IntPtr_op_Explicit_mDDF1A91C58AC17347D735651A0D830CA1E86D4B0(L_55, NULL);
+		intptr_t* L_57;
+		L_57 = il2cpp_unsafe_add<intptr_t,intptr_t>(L_54, L_56);
+		intptr_t* L_58;
+		L_58 = il2cpp_unsafe_add<intptr_t,int32_t>(L_57, ((int32_t)-2));
+		il2cpp_codegen_initobj(L_58, sizeof(intptr_t));
+	}
+
+IL_0136:
+	{
+		intptr_t* L_59 = ___0_ip;
+		intptr_t* L_60;
+		L_60 = il2cpp_unsafe_add<intptr_t,int32_t>(L_59, 1);
+		il2cpp_codegen_initobj(L_60, sizeof(intptr_t));
+		intptr_t* L_61 = ___0_ip;
+		uint64_t L_62 = ___1_pointerSizeLength;
+		intptr_t L_63;
+		L_63 = IntPtr_op_Explicit_mDDF1A91C58AC17347D735651A0D830CA1E86D4B0(L_62, NULL);
+		intptr_t* L_64;
+		L_64 = il2cpp_unsafe_add<intptr_t,intptr_t>(L_61, L_63);
+		intptr_t* L_65;
+		L_65 = il2cpp_unsafe_add<intptr_t,int32_t>(L_64, (-1));
+		il2cpp_codegen_initobj(L_65, sizeof(intptr_t));
+	}
+
+IL_015b:
+	{
+		intptr_t* L_66 = ___0_ip;
+		il2cpp_codegen_initobj(L_66, sizeof(intptr_t));
+		return;
 	}
 }
 #ifdef __clang__
