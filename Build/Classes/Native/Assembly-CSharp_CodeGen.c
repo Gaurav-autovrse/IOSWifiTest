@@ -12,21 +12,21 @@
 
 
 
-// 0x00000001 System.Void IOSBridgeTester::IOSWifiDetails_runNativeCode(System.String)
-extern void IOSBridgeTester_IOSWifiDetails_runNativeCode_mBE4F9DD95610BB6F54978D965676DC521AB21162 (void);
+// 0x00000001 System.Void IOSBridgeTester::printFromNativeCode()
+extern void IOSBridgeTester_printFromNativeCode_m95D00D4CEE8C76E527921CEA1168741328287CBE (void);
 // 0x00000002 System.Void IOSBridgeTester::Start()
 extern void IOSBridgeTester_Start_m52FB8350EC037E24EF07DB7506F02FFED1C148C0 (void);
 // 0x00000003 System.Void IOSBridgeTester::.ctor()
 extern void IOSBridgeTester__ctor_m0156A96E202D78C413C46C3237A7333A41236F99 (void);
 static Il2CppMethodPointer s_methodPointers[3] = 
 {
-	IOSBridgeTester_IOSWifiDetails_runNativeCode_mBE4F9DD95610BB6F54978D965676DC521AB21162,
+	IOSBridgeTester_printFromNativeCode_m95D00D4CEE8C76E527921CEA1168741328287CBE,
 	IOSBridgeTester_Start_m52FB8350EC037E24EF07DB7506F02FFED1C148C0,
 	IOSBridgeTester__ctor_m0156A96E202D78C413C46C3237A7333A41236F99,
 };
 static const int32_t s_InvokerIndices[3] = 
 {
-	1921,
+	1965,
 	1013,
 	1013,
 };

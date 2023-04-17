@@ -1,9 +1,9 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-#import <UnityAppController.h>
+#import "UnityAppController.h"
 
-#include <UndefinePlatforms.h>
+#include "UndefinePlatforms.h"
 #include <mach-o/ldsyms.h>
 typedef struct
 #ifdef __LP64__
@@ -12,7 +12,7 @@ typedef struct
     mach_header
 #endif
     MachHeader;
-#include <RedefinePlatforms.h>
+#include "RedefinePlatforms.h"
 
 
 //! Project version number for UnityFramework.
