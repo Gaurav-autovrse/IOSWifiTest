@@ -1795,6 +1795,8 @@ struct TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9_StaticFields
 
 
 
+// System.Void IOSBridgeTester::GetIOSWifiStrength()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSBridgeTester_GetIOSWifiStrength_m443D999E7728D8E37731A1D4FA0AA595E405E69F (IOSBridgeTester_t50928DFB95A193CA8D2314BF665DF15D2A437ABE* __this, const RuntimeMethod* method) ;
 // System.Int32 IOSBridgeTester::printFromNativeCode()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t IOSBridgeTester_printFromNativeCode_m45E2416C8FB8BB765B70B76291FCF9922A128F1E (const RuntimeMethod* method) ;
 // System.String System.Int32::ToString()
@@ -1829,6 +1831,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t IOSBridgeTester_printFromNativeCode_m
 }
 // System.Void IOSBridgeTester::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSBridgeTester_Start_m52FB8350EC037E24EF07DB7506F02FFED1C148C0 (IOSBridgeTester_t50928DFB95A193CA8D2314BF665DF15D2A437ABE* __this, const RuntimeMethod* method) 
+{
+	{
+		// GetIOSWifiStrength();
+		IOSBridgeTester_GetIOSWifiStrength_m443D999E7728D8E37731A1D4FA0AA595E405E69F(__this, NULL);
+		// }
+		return;
+	}
+}
+// System.Void IOSBridgeTester::GetIOSWifiStrength()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSBridgeTester_GetIOSWifiStrength_m443D999E7728D8E37731A1D4FA0AA595E405E69F (IOSBridgeTester_t50928DFB95A193CA8D2314BF665DF15D2A437ABE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
