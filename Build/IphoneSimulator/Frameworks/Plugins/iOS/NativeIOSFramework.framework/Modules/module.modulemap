@@ -1,0 +1,11 @@
+framework module NativeIOSFramework {
+  umbrella header "NativeIOSFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module NativeIOSFramework.Swift {
+  header "NativeIOSFramework-Swift.h"
+  requires objc
+}
